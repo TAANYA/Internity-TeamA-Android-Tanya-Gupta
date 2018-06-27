@@ -9,4 +9,11 @@
         app:showAsAction="always"
         app:actionViewClass="android.widget.SearchView" />
 
+    <item
+        android:id="@+id/location"
+        android:icon="@drawable/gps"
+        android:title=""
+        app:showAsAction="always"
+        />
+
 </menu>

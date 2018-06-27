@@ -13,4 +13,9 @@ public interface Api
 
     @GET("data/2.5/weather")
     Call<Data> getData(@Query("appid") String appid , @Query("q") String query);
+
+    @GET("data/2.5/weather")
+    Call<Data> getData(@Query("appid") String appid , @Query("lat") String lat,@Query("lon") String lon);
+
+
 }
