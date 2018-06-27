@@ -9,9 +9,8 @@ import retrofit2.http.Query;
 
 public interface Api
 {
-    String city = "delhi";
-    String BASE_URL = "api.openweathermap.org/data/2.5/weather/";
+    String BASE_URL = "http://api.openweathermap.org/";
 
-    @GET
-    Call<Data> getdata(@Query("appid") String appid , @Query("q") String query) ;
+    @GET("data/2.5/weather")
+    Call<Data> getData(@Query("appid") String appid , @Query("q") String query);
 }

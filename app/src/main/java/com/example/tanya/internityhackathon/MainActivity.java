@@ -2,6 +2,7 @@ package com.example.tanya.internityhackathon;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity
 
         Api api = retrofit.create(Api.class);
 
-        Call<Data> call = api.getData();
+        Call<Data> call = api.getData("51bd186d81e9633cd022b45a26cdf1f2","delhi");
 
 
         call.enqueue(new Callback<Data>() {
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity
             public void onResponse(Call<Data> call, Response<Data> response)
             {
                 ArrayList<Weather> dlist = response.body().getWeather();
+                Log.i("Checkkkkkkk", "onResponse: "+ response.body());
 
 
             }
