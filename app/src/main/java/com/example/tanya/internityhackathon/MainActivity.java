@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tanya.internityhackathon.weather.Weather;
@@ -32,7 +33,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    EditText edtlon, edtlat, edtdesc, edttemp, edtpressure,
+    TextView edtlon, edtlat, edtdesc, edttemp, edtpressure,
             edtmintemp, edtmaxtemp, edthumid, edtspeed, edtdeg, edtcity;
     LocationManager mLocationManager;
     LocationListener mLocationListener;
@@ -48,17 +49,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edtlon = (EditText) findViewById(R.id.edtlong);
-        edtlat = (EditText) findViewById(R.id.edtlat);
-        edtdesc = (EditText) findViewById(R.id.edtweather);
-        edttemp = (EditText) findViewById(R.id.edttemp);
-        edtpressure = (EditText) findViewById(R.id.edtpressure);
-        edthumid = (EditText) findViewById(R.id.edthumid);
-        edtmintemp = (EditText) findViewById(R.id.edttempmin);
-        edtmaxtemp = (EditText) findViewById(R.id.edttempmax);
-        edtspeed = (EditText) findViewById(R.id.edtspeed);
-        edtdeg = (EditText) findViewById(R.id.edtwinddeg);
-        edtcity = (EditText) findViewById(R.id.edtcity);
+        edtlon = (TextView) findViewById(R.id.edtlong);
+        edtlat = (TextView) findViewById(R.id.edtlat);
+        edtdesc = (TextView) findViewById(R.id.edtweather);
+        edttemp = (TextView) findViewById(R.id.edttemp);
+        edtpressure = (TextView) findViewById(R.id.edtpressure);
+        edthumid = (TextView) findViewById(R.id.edthumid);
+        edtmintemp = (TextView) findViewById(R.id.edttempmin);
+        edtmaxtemp = (TextView) findViewById(R.id.edttempmax);
+        edtspeed = (TextView) findViewById(R.id.edtspeed);
+        edtdeg = (TextView) findViewById(R.id.edtwinddeg);
+        edtcity = (TextView) findViewById(R.id.edtcity);
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
 
     }

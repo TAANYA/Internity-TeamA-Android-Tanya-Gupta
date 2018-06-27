@@ -37,12 +37,13 @@
                 android:textStyle="bold|italic"
                 />
 
-            <EditText
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="City name"
                 android:id="@+id/edtcity"
-                android:layout_marginStart="120dp"
+                android:gravity="center"
+                android:textSize="20dp"
                 android:layout_below="@+id/texthead"
                 android:layout_marginBottom="20dp"
                 />
@@ -58,11 +59,13 @@
                 android:layout_below="@+id/edtcity"
                 />
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edtlong"
-                android:hint="20.45"
+                android:layout_marginTop="12dp"
+                android:hint="         "
+                android:textSize="18dp"
                 android:layout_toRightOf="@+id/textlong"
                 android:layout_below="@+id/edtcity"/>
 
@@ -70,22 +73,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Latitudes :"
+                android:text="Latitudes : "
                 android:id="@+id/textlat"
                 android:textSize="20dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
                 android:textStyle="bold"
                 android:layout_below="@+id/edtcity"
-                android:layout_marginStart="5dp"
                 android:layout_toRightOf="@+id/edtlong"
                 />
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edtlat"
                 android:layout_toRightOf="@+id/textlat"
-                android:hint="20.45"
+                android:hint="       "
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
                 android:layout_below="@+id/edtcity"/>
 
 
@@ -99,14 +104,14 @@
                 android:layout_marginTop="40dp"
                 android:textSize="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edtweather"
-                android:textSize="10dp"
+                android:textSize="18sp"
                 android:layout_toRightOf="@+id/textweather"
                 android:layout_below="@+id/edtlong"
-                android:layout_marginTop="35dp"/>
+                android:layout_marginTop="44dp"/>
 
 
 
@@ -120,12 +125,13 @@
                 android:layout_below="@+id/textweather"
                 android:textSize="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edttemp"
+                android:layout_marginTop="14dp"
                 android:layout_toRightOf="@+id/texttemp"
-                android:textSize="15dp"
+                android:textSize="18dp"
                 android:layout_below="@+id/edtweather"/>
 
 
@@ -140,11 +146,12 @@
                 android:layout_marginTop="10dp"
                 android:textSize="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edtpressure"
-                android:textSize="15dp"
+                android:textSize="18dp"
+                android:layout_marginTop="14dp"
                 android:layout_toRightOf="@+id/textpressure"
                 android:layout_below="@+id/edttemp"/>
 
@@ -160,12 +167,13 @@
                 android:layout_marginTop="10dp"
                 android:textSize="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edthumid"
                 android:layout_toRightOf="@+id/texthumid"
-                android:textSize="10dp"
+                android:textSize="18dp"
+                android:layout_marginTop="14dp"
                 android:layout_below="@+id/edtpressure" />
 
 
@@ -181,11 +189,12 @@
                 android:layout_marginTop="10dp"
                 android:textSize="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edttempmin"
-                android:textSize="15dp"
+                android:textSize="18dp"
+                android:layout_marginTop="14dp"
                 android:layout_toRightOf="@+id/texttempmin"
                 android:layout_below="@+id/edthumid"/>
 
@@ -202,12 +211,13 @@
                 android:layout_marginTop="10dp"
                 android:textSize="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edttempmax"
                 android:layout_toRightOf="@+id/texttempmax"
-                android:textSize="10dp"
+                android:textSize="18dp"
+                android:layout_marginTop="14dp"
                 android:layout_below="@+id/edttempmin"/>
 
 
@@ -222,13 +232,14 @@
                 android:layout_marginTop="35dp"
                 android:textSize="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edtspeed"
                 android:layout_toRightOf="@+id/textwindspeed"
                 android:layout_below="@+id/edttempmax"
-                android:layout_marginTop="30dp"/>
+                android:textSize="18dp"
+                android:layout_marginTop="35dp"/>
 
 
             <TextView
@@ -239,17 +250,18 @@
                 android:textStyle="bold"
                 android:layout_below="@+id/texttempmax"
                 android:layout_toRightOf="@+id/edtspeed"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="35dp"
                 android:textSize="20dp"/>
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edtwinddeg"
+                android:textSize="18dp"
                 android:layout_toRightOf="@+id/textwinddeg"
                 android:layout_below="@+id/edttempmax"
-                android:layout_marginTop="30dp"/>
+                android:layout_marginTop="33dp"/>
 
 
 
