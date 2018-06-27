@@ -4,9 +4,255 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="#123456"
     tools:context=".MainActivity">
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        android:id="@+id/cardview">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/w1"
+            android:padding="10dp">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texthead"
+                android:text="Weather Information"
+                android:layout_centerHorizontal="true"
+                android:textSize="30dp"
+                android:textColor="#ff1493"
+                android:textStyle="bold|italic"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="City name"
+                android:id="@+id/edtcity"
+                android:layout_marginStart="120dp"
+                android:layout_below="@+id/texthead"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Longitudes: "
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:id="@+id/textlong"
+                android:layout_below="@+id/edtcity"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtlong"
+                android:hint="20.45"
+                android:layout_toRightOf="@+id/textlong"
+                android:layout_below="@+id/edtcity"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitudes :"
+                android:id="@+id/textlat"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/edtcity"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/edtlong"
+                />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtlat"
+                android:layout_toRightOf="@+id/textlat"
+                android:hint="20.45"
+                android:layout_below="@+id/edtcity"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textweather"
+                android:text="Weather Description: "
+                android:textStyle="bold"
+                android:layout_below="@+id/textlong"
+                android:layout_marginTop="40dp"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtweather"
+                android:textSize="10dp"
+                android:layout_toRightOf="@+id/textweather"
+                android:layout_below="@+id/edtlong"
+                android:layout_marginTop="35dp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texttemp"
+                android:text="Temperature "
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textweather"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edttemp"
+                android:layout_toRightOf="@+id/texttemp"
+                android:textSize="15dp"
+                android:layout_below="@+id/edtweather"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textpressure"
+                android:text="Pressure: "
+                android:textStyle="bold"
+                android:layout_below="@+id/texttemp"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtpressure"
+                android:textSize="15dp"
+                android:layout_toRightOf="@+id/textpressure"
+                android:layout_below="@+id/edttemp"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texthumid"
+                android:text="Humidity: "
+                android:textStyle="bold"
+                android:layout_below="@+id/textpressure"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edthumid"
+                android:layout_toRightOf="@+id/texthumid"
+                android:textSize="10dp"
+                android:layout_below="@+id/edtpressure" />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texttempmin"
+                android:text="Min Temperature: "
+                android:textStyle="bold"
+                android:layout_below="@+id/texthumid"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edttempmin"
+                android:textSize="15dp"
+                android:layout_toRightOf="@+id/texttempmin"
+                android:layout_below="@+id/edthumid"/>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/texttempmax"
+                android:text="Max Temperature: "
+                android:textStyle="bold"
+                android:layout_below="@+id/texttempmin"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edttempmax"
+                android:layout_toRightOf="@+id/texttempmax"
+                android:textSize="10dp"
+                android:layout_below="@+id/edttempmin"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textwindspeed"
+                android:text="Wind Speed: "
+                android:textStyle="bold"
+                android:layout_below="@+id/texttempmax"
+                android:layout_marginTop="35dp"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtspeed"
+                android:layout_toRightOf="@+id/textwindspeed"
+                android:layout_below="@+id/edttempmax"
+                android:layout_marginTop="30dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textwinddeg"
+                android:text="Wind Degree: "
+                android:textStyle="bold"
+                android:layout_below="@+id/texttempmax"
+                android:layout_toRightOf="@+id/edtspeed"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="35dp"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtwinddeg"
+                android:layout_toRightOf="@+id/textwinddeg"
+                android:layout_below="@+id/edttempmax"
+                android:layout_marginTop="30dp"/>
+
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
 
 
 </RelativeLayout>

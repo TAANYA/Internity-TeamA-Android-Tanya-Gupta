@@ -2,27 +2,27 @@ package com.example.tanya.internityhackathon;
 
 public class Coord
 {
-    private double lon;
-    private double lat;
+    private String lon;
+    private String lat;
 
-    public Coord(double lon, double lat) {
+    public Coord(String lon, String lat) {
         this.lon = lon;
         this.lat = lat;
     }
 
-    public double getLon() {
+    public String getLon() {
         return lon;
     }
 
-    public void setLon(double lon) {
+    public void setLon(String lon) {
         this.lon = lon;
     }
 
-    public double getLat() {
+    public String getLat() {
         return lat;
     }
 
-    public void setLat(double lat) {
+    public void setLat(String lat) {
         this.lat = lat;
     }
 
