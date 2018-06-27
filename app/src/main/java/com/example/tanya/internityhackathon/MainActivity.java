@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
                 edtcity.setText(response.body().getName());
                 edtlon.setText(response.body().getCoord().getLon());
-                edtlon.setText(response.body().getCoord().getLat());
+                edtlat.setText(response.body().getCoord().getLat());
                 edttemp.setText(response.body().getMain().getTemp());
                 edtpressure.setText(response.body().getMain().getPressure());
                 edthumid.setText(response.body().getMain().getHumidity());
@@ -209,7 +209,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void getData2(String lat, String lon) {
+    private void getData2(String lat, String lon)
+    {
+        edtlon.setText(lat.substring(0,5));
+        edtlat.setText(lon.substring(0 ,5));
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Api.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create()) //Here we are using the GsonConverterFactory to directly convert json data to object
@@ -234,8 +237,7 @@ public class MainActivity extends AppCompatActivity {
                 ArrayList<Weather> dlist = response.body().getWeather();
 
                 edtcity.setText(response.body().getName());
-                edtlon.setText(response.body().getCoord().getLon());
-                edtlon.setText(response.body().getCoord().getLat());
+
                 edttemp.setText(response.body().getMain().getTemp());
                 edtpressure.setText(response.body().getMain().getPressure());
                 edthumid.setText(response.body().getMain().getHumidity());

@@ -108,7 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/edtweather"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:layout_toRightOf="@+id/textweather"
                 android:layout_below="@+id/edtlong"
                 android:layout_marginTop="44dp"/>
