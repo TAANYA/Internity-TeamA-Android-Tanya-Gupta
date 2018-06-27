@@ -74,10 +74,18 @@ public class MainActivity extends AppCompatActivity {
 
         call.enqueue(new Callback<Data>() {
             @Override
-            public void onResponse(Call<Data> call, Response<Data> response) {
+            public void onResponse(Call<Data> call, Response<Data> response)
+            {
+                progressBar.setVisibility(View.GONE);
+
+                if(response.body() == null)
+                {
+                    Toast.makeText(MainActivity.this, "No result found", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
                 ArrayList<Weather> dlist = response.body().getWeather();
 //                Log.i("Checkkkkkkk", "onResponse: "+ response.body());
-                progressBar.setVisibility(View.GONE);
 
                 edtcity.setText(response.body().getName());
                 edtlon.setText(response.body().getCoord().getLon());
@@ -201,9 +209,15 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<Data>() {
             @Override
             public void onResponse(Call<Data> call, Response<Data> response) {
-                ArrayList<Weather> dlist = response.body().getWeather();
+
                 progressBar.setVisibility(View.GONE);
 //                Log.i("Checkkkkkkk", "onResponse: "+ response.body());
+                if(response.body() == null)
+                {
+                    Toast.makeText(MainActivity.this, "No result found", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                ArrayList<Weather> dlist = response.body().getWeather();
 
                 edtcity.setText(response.body().getName());
                 edtlon.setText(response.body().getCoord().getLon());
